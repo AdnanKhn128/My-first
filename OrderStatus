@@ -1,0 +1,22 @@
+enum OrderStatus {
+    PENDING, SHIPPED, DELIVERED; 
+}
+
+class Order {
+     int id;
+     OrderStatus status;
+
+    public Order(int id) {
+        this.id = id;
+        this.status = OrderStatus.PENDING;
+    }
+
+    public void updateStatus(OrderStatus newStatus) {
+        this.status = newStatus;
+    }
+
+    public void printStatus() {
+        System.out.println("Order " + id + " is " + status);
+    }
+}
+ 
